@@ -2,12 +2,13 @@
 {
     public static void Main(string[] args)
     {
-        System.Console.WriteLine("\bPractice short exercises on .NET!");
+        System.Console.WriteLine("Practice short exercises on .NET!");
         System.Console.WriteLine("\n");
 
         FabonnaciSeries();
         System.Console.WriteLine("\n");
         FabonnaciSeriesWithRecursion();
+        Factorial();
     }
 
     public static void FabonnaciSeries()
@@ -32,8 +33,10 @@
     public static void FabonnaciSeriesWithRecursion()
     {
         System.Console.WriteLine("\u001b[1mFabonnaci series with recursion\u001b[0m");
+        System.Console.WriteLine("Enter the number of terms!");
 
-        int n = 10; // Number of terms to display
+        // int n = int.Parse(Console.ReadLine());
+        int n = 8;
         for (int i = 0; i < n; i++)
         {
             System.Console.WriteLine(Fib(i));
@@ -45,6 +48,26 @@
         if (n <= 1)
             return n;
         return Fib(n - 1) + Fib(n - 2);
+    }
+
+    private static int Fact(int n)
+    {
+        while (n>0) {
+            return n*Fact(n-1);
+        }
+        return 1;
+    }
+
+    public static void Factorial()
+    {
+        System.Console.WriteLine("\u001b[1mFactorial\u001b[0m");
+        System.Console.WriteLine("Enter the number!");
+
+        int n = int.Parse(Console.ReadLine());
+        
+        int fact = Fact(n);
+        
+        System.Console.WriteLine(fact);
     }
 }
 
