@@ -9,6 +9,7 @@
         System.Console.WriteLine("\n");
         FabonnaciSeriesWithRecursion();
         Factorial();
+        Palindrome();
     }
 
     public static void FabonnaciSeries()
@@ -63,11 +64,38 @@
         System.Console.WriteLine("\u001b[1mFactorial\u001b[0m");
         System.Console.WriteLine("Enter the number!");
 
-        int n = int.Parse(Console.ReadLine());
+        // int n = int.Parse(Console.ReadLine());
+        int n = 5;
         
         int fact = Fact(n);
         
         System.Console.WriteLine(fact);
+    }
+
+    public static void Palindrome()
+    {
+        // get string
+        System.Console.WriteLine("\u001b[1mPalindrome\u001b[0m");
+        System.Console.WriteLine("Enter the string!");
+
+        string str = "dad";
+        string reversed = "";
+
+        // reverse the string
+        for(int i=str.Length-1; i>=0; i--)
+        {
+            reversed += str[i];
+        }
+
+        if (str == reversed)
+        {
+            System.Console.WriteLine("The string is a palindrome");
+        }
+        else
+        {
+            System.Console.WriteLine("The string is not a palindrome");
+        }
+    
     }
 }
 
