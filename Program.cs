@@ -21,7 +21,7 @@
         int sum = 0;
         System.Console.WriteLine(a);
 
-        while(a<100)
+        while(a<15)
         {
             sum=a+b;
             a=b;
@@ -37,7 +37,7 @@
         System.Console.WriteLine("Enter the number of terms!");
 
         // int n = int.Parse(Console.ReadLine());
-        int n = 8;
+        int n = 6;
         for (int i = 0; i < n; i++)
         {
             System.Console.WriteLine(Fib(i));
